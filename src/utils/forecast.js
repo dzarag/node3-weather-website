@@ -16,7 +16,7 @@ const forecast = (latitude, longitude, callback) => {
 
       const forecastString =
         dailyData[0].summary +
-        ` It is currently ${temperature} degrees out. There is a ${precipProbability}% chance of rain.`;
+        ` It is currently ${temperature} degrees out. The maximum temperature for the day is going to be ${dailyData[0].temperatureMax}°C and we will have a minimum of ${dailyData[0].temperatureMin}°C. There is a ${precipProbability}% chance of rain.`;
 
       callback(undefined, forecastString);
     }
